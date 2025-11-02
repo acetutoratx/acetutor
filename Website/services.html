@@ -1,0 +1,123 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — ACE Tutoring</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.svg" alt="ACE Tutoring Logo" />
+        <span>ACE Tutoring</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://booking.appointy.com/AceTutor?sr=1246231" target="_blank" class="btn">Book Now</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="plan-toggle">
+      <button class="toggle-btn active" data-plan="standard">Standard Plan</button>
+      <button class="toggle-btn" data-plan="personalized">Personalized Plan (+$10/hr)</button>
+    </div>
+
+    <div class="plan-description active" data-plan="standard">
+      <p><strong>Standard Plan:</strong> Focused tutoring sessions with live teaching, guided practice, and concept review. Perfect for targeted help or short-term goals.</p>
+    </div>
+    <div class="plan-description" data-plan="personalized">
+      <p><strong>Personalized Plan:</strong> Includes all Standard features plus custom homework assignments, learning plans, and weekly check-ins designed to strengthen long-term learning. Strongly recommended for faster progress.</p>
+    </div>
+
+    <div class="card-grid" style="margin-top: 2rem;">
+      <div class="card fade-in">
+        <h3>K–8 Tutoring</h3>
+        <p>Homework help, reading, math foundations. Doubles as academic babysitting.</p>
+        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
+          <span>Standard: $35/hr</span>
+          <span>Personalized: $45/hr</span>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <h3>High School Core</h3>
+        <p>Algebra, Geometry, Precalc, English, Chemistry, Biology, History.</p>
+        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
+          <span>Standard: $45/hr</span>
+          <span>Personalized: $55/hr</span>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <h3>AP Tutoring</h3>
+        <p>Subject-specific AP tutoring from students who scored 5s on exams.</p>
+        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
+          <span>Standard: $50/hr</span>
+          <span>Personalized: $60/hr</span>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <h3>SAT / ACT Prep</h3>
+        <p>One-on-one test prep with 1500+ SAT scorers.</p>
+        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
+          <span>Standard: $70/hr</span>
+          <span>Personalized: $80/hr</span>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <h3>Group SAT/ACT (2–4)</h3>
+        <p>Collaborative learning and strategy-based instruction.</p>
+        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
+          <span>$40/hr per student</span>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <h3>College Essay Coaching</h3>
+        <p>Essay planning, writing, and final revisions for college apps.</p>
+        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
+          <span>$100/session</span>
+          <span>$300 package</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #F9FAFB;">
+    <h2 class="section-title">College Applications Package</h2>
+    <div class="card-grid">
+      <div class="card fade-in">
+        <h3><i class="fas fa-file-alt" style="color: var(--sage); margin-right: 0.5rem;"></i> $300 College Applications Package</h3>
+        <p>A complete, start-to-finish essay coaching program with Aarav or Charity. Includes brainstorming, outlining, writing, and polishing until your essays are submission-ready. Focus on storytelling, structure, and authentic voice.</p>
+      </div>
+      <div class="card fade-in">
+        <h3><i class="fas fa-edit" style="color: var(--sage); margin-right: 0.5rem;"></i> $100 Single Essay Session</h3>
+        <p>A focused one-hour session for students with a draft or specific prompt. Get direct feedback on tone, clarity, and narrative strength. Perfect for final edits or targeted help.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <h3>ACE Tutoring</h3>
+      <p>Achievement • Clarity • Empowerment</p>
+      <div class="social-icons">
+        <a href="tel:5128884489"><i class="fas fa-phone"></i></a>
+        <a href="mailto:contact@tutorace.org"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/acetutoratx" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>Email: contact@tutorace.org<br>Phone: (512) 888-4489</p>
+    </div>
+    <p class="copyright">© 2025 ACE Tutoring</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
