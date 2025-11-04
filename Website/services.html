@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services — ACE Tutoring</title>
+  <title>Services — ACE Tutor</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,14 +15,15 @@
     <nav class="navbar container">
       <a href="index.html" class="logo">
         <img src="assets/logo.svg" alt="ACE Tutoring Logo" />
-        <span>ACE Tutoring</span>
+        <span>ACE Tutor</span>
       </a>
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="get-started.html">Get Started</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="https://booking.appointy.com/AceTutor?sr=1246231" target="_blank" class="btn">Book Now</a>
+      <a href="get-started.html" class="btn">Book Now</a>
     </nav>
   </header>
 
@@ -32,61 +34,113 @@
       <button class="toggle-btn" data-plan="personalized">Personalized Plan (+$10/hr)</button>
     </div>
 
-    <div class="plan-description active" data-plan="standard">
-      <p><strong>Standard Plan:</strong> Focused tutoring sessions with live teaching, guided practice, and concept review. Perfect for targeted help or short-term goals.</p>
+    <div class="plan-description-container">
+      <div class="plan-description" data-plan="standard">
+        <p><strong>Standard Plan:</strong> Focused tutoring sessions designed for students who need targeted help or have short-term academic goals. Includes:</p>
+        <ul class="plan-features">
+          <li><i class="fas fa-chalkboard-teacher" style="color: var(--sage);"></i> <strong>Live Teaching</strong> - Interactive sessions with expert tutors</li>
+          <li><i class="fas fa-hands-helping" style="color: var(--sage);"></i> Guided practice and concept review</li>
+          <li><i class="fas fa-book" style="color: var(--sage);"></i> Homework assistance and test preparation</li>
+          <li><i class="fas fa-clock" style="color: var(--sage);"></i> Flexible scheduling options</li>
+        </ul>
+        <p class="plan-summary"><strong>Ideal for:</strong> Students who need help with specific subjects or short-term academic support.</p>
+      </div>
+      
+      <div class="plan-description" data-plan="personalized" style="display: none;">
+        <div class="plan-recommended">★ Recommended for Best Results ★</div>
+        <p><strong>Personalized Plan (+$10/hr):</strong> Our most comprehensive package for students who want to maximize their academic potential. Includes everything in the Standard Plan, plus:</p>
+        <ul class="plan-features">
+          <li><i class="fas fa-star" style="color: var(--sage);"></i> <strong>Customized Homework</strong> - Tailored assignments that target your child's specific learning needs</li>
+          <li><i class="fas fa-tasks" style="color: var(--sage);"></i> Individualized learning plan with progress tracking</li>
+          <li><i class="fas fa-calendar-check" style="color: var(--sage);"></i> Priority scheduling and flexible rescheduling</li>
+          <li><i class="fas fa-chart-line" style="color: var(--sage);"></i> Weekly progress reports and analytics</li>
+        </ul>
+        <p class="plan-summary"><strong>Why choose Personalized?</strong> 85% of our students see significant grade improvements within 8 weeks. The small additional investment delivers substantially better results through personalized attention and targeted practice.</p>
+      </div>
     </div>
-    <div class="plan-description" data-plan="personalized">
-      <p><strong>Personalized Plan:</strong> Includes all Standard features plus custom homework assignments, learning plans, and weekly check-ins designed to strengthen long-term learning. Strongly recommended for faster progress.</p>
-    </div>
-
-    <div class="card-grid" style="margin-top: 2rem;">
-      <div class="card fade-in">
-        <h3>K–8 Tutoring</h3>
-        <p>Personalized support in reading, writing, and math fundamentals. Builds strong academic habits and confidence from an early age.</p>
-        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
-          <span>Standard: $35/hr</span>
-          <span>Personalized: $45/hr</span>
+    <div class="card-grid" style="margin-top: 1.5rem; position: relative;">
+      <a href="services/k8-tutoring.html" class="card-link">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <i class="fas fa-child"></i>
+          </div>
+          <h3>K–8 Tutoring</h3>
+          <p>Homework help, reading, math foundations. Doubles as academic babysitting.</p>
+          <div class="pricing">
+            <span class="standard-price">$25/hr</span>
+            <span class="personalized-price">$35/hr</span>
+          </div>
+          <div class="learn-more">Learn more →</div>
         </div>
-      </div>
-      <div class="card fade-in">
-        <h3>High School Core</h3>
-        <p>Focused help for regular and Pre-AP courses. Strengthens understanding, organization, and long-term study skills.</p>
-        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
-          <span>Standard: $45/hr</span>
-          <span>Personalized: $55/hr</span>
+      </a>
+      <a href="services/high-school-core.html" class="card-link">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <h3>High School Core</h3>
+          <p>Algebra, Geometry, Precalc, English, Chemistry, Biology, History.</p>
+          <div class="pricing">
+            <span class="standard-price">$35/hr</span>
+            <span class="personalized-price">$45/hr</span>
+          </div>
+          <div class="learn-more">Learn more →</div>
         </div>
-      </div>
-      <div class="card fade-in">
-        <h3>AP Tutoring</h3>
-        <p>Subject-specific AP tutoring from students who scored 5s on exams.</p>
-        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
-          <span>Standard: $50/hr</span>
-          <span>Personalized: $60/hr</span>
+      </a>
+      <a href="services/ap-tutoring.html" class="card-link">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3>AP Tutoring</h3>
+          <p>Subject-specific AP tutoring from students who scored 5s on exams.</p>
+          <div class="pricing">
+            <span class="standard-price">$45/hr</span>
+            <span class="personalized-price">$55/hr</span>
+          </div>
+          <div class="learn-more">Learn more →</div>
         </div>
-      </div>
-      <div class="card fade-in">
-        <h3>SAT / ACT Prep</h3>
-        <p>One-on-one test prep with 1550+ SAT scorers. Covers strategies, pacing, and confidence to reach your target score.</p>
-        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
-          <span>Standard: $70/hr</span>
-          <span>Personalized: $80/hr</span>
+      </a>
+      <a href="services/sat-act-prep.html" class="card-link">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <i class="fas fa-pen-fancy"></i>
+          </div>
+          <h3>SAT / ACT Prep</h3>
+          <p>One-on-one test prep with 1500+ SAT scorers.</p>
+          <div class="pricing">
+            <span class="standard-price">$70/hr</span>
+            <span class="personalized-price">$80/hr</span>
+          </div>
+          <div class="learn-more">Learn more →</div>
         </div>
-      </div>
-      <div class="card fade-in">
-        <h3>Group SAT/ACT (2–4)</h3>
-        <p>Collaborative learning and strategy-based instruction.</p>
-        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
-          <span>$40/hr per student</span>
+      </a>
+      <a href="services/sat-act-prep.html#group" class="card-link">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Group SAT/ACT (2–4)</h3>
+          <p>Collaborative learning and strategy-based instruction.</p>
+          <div class="pricing">
+            <span class="standard-price">$40/hr per student</span>
+          </div>
+          <div class="learn-more">Learn more →</div>
         </div>
-      </div>
-      <div class="card fade-in">
-        <h3>College Essay Coaching</h3>
-        <p>Essay planning, writing, and final revisions for college apps.</p>
-        <div class="pricing" style="display: flex; justify-content: space-between; margin-top: 1rem;">
-          <span>$100/session</span>
-          <span>$300 package</span>
+      </a>
+      <a href="services/college-essay.html" class="card-link">
+        <div class="card fade-in">
+          <div class="card-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>College Essay Coaching</h3>
+          <p>Essay planning, writing, and final revisions for college apps.</p>
+          <div class="pricing">
+            <span class="standard-price">$100/session or $300 package</span>
+          </div>
+          <div class="learn-more">Learn more →</div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
@@ -94,30 +148,544 @@
     <h2 class="section-title">College Applications Package</h2>
     <div class="card-grid">
       <div class="card fade-in">
-        <h3><i class="fas fa-file-alt" style="color: var(--sage); margin-right: 0.5rem;"></i> $300 College Applications Package</h3>
-        <p>A complete, start-to-finish essay coaching program with Aarav or Charity. Includes brainstorming, outlining, writing, and polishing until your essays are submission-ready. Focus on storytelling, structure, and authentic voice.</p>
-      </div>
-      <div class="card fade-in">
         <h3><i class="fas fa-edit" style="color: var(--sage); margin-right: 0.5rem;"></i> $100 Single Essay Session</h3>
         <p>A focused one-hour session for students with a draft or specific prompt. Get direct feedback on tone, clarity, and narrative strength. Perfect for final edits or targeted help.</p>
+      </div>
+      <div class="card fade-in">
+        <h3><i class="fas fa-file-alt" style="color: var(--sage); margin-right: 0.5rem;"></i> $300 College Applications Package</h3>
+        <p>A complete, start-to-finish essay coaching program with Aarav or Charity. Includes brainstorming, outlining, writing, and polishing until your essays are submission-ready. Focus on storytelling, structure, and authentic voice.</p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="footer-content">
-      <h3>ACE Tutoring</h3>
+      <h3>ACE Tutor</h3>
       <p>Achievement • Clarity • Empowerment</p>
       <div class="social-icons">
-        <a href="tel:5128884489"><i class="fas fa-phone"></i></a>
-        <a href="mailto:contact@tutorace.org"><i class="fas fa-envelope"></i></a>
-        <a href="https://instagram.com/acetutoratx" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="tel:5128884489" title="Call us"><i class="fas fa-phone"></i></a>
+        <a href="mailto:contact@tutorace.org" title="Email us"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/acetutoratx" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
       </div>
       <p>Email: contact@tutorace.org<br>Phone: (512) 888-4489</p>
     </div>
-    <p class="copyright">© 2025 ACE Tutoring</p>
+    <p class="copyright">© 2025 ACE Tutor. All rights reserved. Austin, TX.</p>
   </footer>
 
+  <style>
+    /* Scroll Down Indicator */
+    .scroll-down {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      animation: bounce 2s infinite;
+    }
+    
+    .scroll-down:hover {
+      opacity: 1;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    
+    .scroll-down i {
+      font-size: 1.5rem;
+      margin-top: 4px;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+    
+    /* Plan Toggle Animation */
+    .plan-toggle {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      position: relative;
+      background: #f5f5f5;
+      padding: 4px;
+      border-radius: 50px;
+      max-width: 500px;
+      margin: 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .toggle-btn {
+      flex: 1;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #555;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .toggle-btn.active {
+      color: white;
+      background: var(--sage);
+      box-shadow: 0 4px 12px rgba(138, 155, 142, 0.3);
+    }
+    
+    .toggle-btn:not(.active):hover {
+      color: var(--sage);
+      transform: translateY(-1px);
+    }
+    
+    /* Plan Description Animation */
+    .plan-description-container {
+      position: relative;
+      min-height: 200px;
+      margin: 1.5rem 0;
+      overflow: hidden;
+    }
+    
+    .plan-description {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(20px);
+      position: absolute;
+      width: 100%;
+      visibility: hidden;
+    }
+    
+    .plan-description.active {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+      position: relative;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .plan-features {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    
+    .plan-features li {
+      margin-bottom: 0.5rem;
+      list-style-type: none;
+      position: relative;
+      padding-left: 1.8rem;
+    }
+    
+    .plan-features li i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+    
+    .plan-recommended {
+      background: var(--sage);
+      color: white;
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(138, 155, 142, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      color: var(--sage);
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover .card-icon {
+      background: var(--sage);
+      color: white;
+      transform: scale(1.1);
+    }
+    
+    .pricing {
+      min-height: 32px; /* Slightly taller to accommodate both prices */
+      margin-top: 1rem;
+      position: relative;
+    }
+    
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+    
+    .card-link:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-link:hover .card {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card {
+      height: 100%;
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+    
+    .learn-more {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.5rem;
+      color: var(--sage);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    
+    .card-link:hover .learn-more {
+      transform: translateX(5px);
+    }
+    
+    .pricing {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .standard-price,
+    .personalized-price {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.2s ease;
+      font-size: 1.1em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .standard-price {
+      background-color: #d1e0d4; /* Slightly darker sage */
+      color: #2c3e50;
+      border-left: 4px solid var(--sage);
+    }
+    
+    .personalized-price {
+      background-color: #d1e0d4; /* Matching the standard price background */
+      color: #1a3a1a;
+      border-left: 4px solid var(--sage);
+      display: none;
+    }
+    
+    /* Ensure consistent color for all cards */
+    .pricing > span {
+      background-color: #d1e0d4;
+      border-left: 4px solid var(--sage);
+    }
+    
+    /* Hover effects */
+    .standard-price:hover,
+    .personalized-price:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Plan-specific styles */
+    body.personalized-plan .standard-price {
+      display: none;
+    }
+    
+    body.personalized-plan .personalized-price {
+      display: block;
+    }
+    .plan-description-container {
+      position: relative;
+      margin: 1.5rem 0 0;
+    }
+    
+    .plan-description {
+      margin: 1.5rem auto;
+      max-width: 800px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .plan-features {
+      text-align: left;
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+    
+    .plan-features li {
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    
+    .plan-features i {
+      margin-right: 0.75rem;
+    }
+    
+    .plan-recommended {
+      background: var(--sage);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .plan-summary {
+      font-style: italic;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    
+    .toggle-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 80%;
+      height: 2px;
+      background-color: var(--sage);
+    }
+    
+    .toggle-btn.active::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+    
+    @media (max-width: 768px) {
+      .plan-toggle {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .toggle-btn {
+        padding: 0.75rem;
+      }
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add scroll down button
+      const scrollDownBtn = document.createElement('div');
+      scrollDownBtn.className = 'scroll-down';
+      scrollDownBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+      document.body.appendChild(scrollDownBtn);
+      
+      // Show/hide scroll down button based on scroll position
+      function handleScroll() {
+        const scrollPosition = window.innerHeight + window.scrollY;
+        const pageHeight = document.documentElement.scrollHeight - 100; // 100px from bottom
+        
+        if (scrollPosition < pageHeight) {
+          scrollDownBtn.style.display = 'flex';
+        } else {
+          scrollDownBtn.style.display = 'none';
+        }
+      }
+      
+      // Scroll down function
+      scrollDownBtn.addEventListener('click', function() {
+        window.scrollBy({
+          top: window.innerHeight * 0.8, // Scroll 80% of viewport height
+          behavior: 'smooth'
+        });
+      });
+      
+      // Initial check
+      handleScroll();
+      
+      // Check on scroll
+      window.addEventListener('scroll', handleScroll);
+      const toggleButtons = document.querySelectorAll('.toggle-btn');
+      const planDescriptions = document.querySelectorAll('.plan-description');
+      
+      // Function to show a plan with animation
+      function showPlan(plan) {
+        // Update active button with animation
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+          if (btn.dataset.plan === plan) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+        
+        // Animate plan descriptions
+        const planContainer = document.querySelector('.plan-description-container');
+        const currentActive = document.querySelector('.plan-description.active');
+        const newActive = document.querySelector(`.plan-description[data-plan="${plan}"]`);
+        
+        // Only animate if changing plans
+        if (currentActive !== newActive) {
+          // Immediately hide current active without animation
+          if (currentActive) {
+            currentActive.classList.remove('active');
+            currentActive.style.display = 'none';
+          }
+          
+          // Prepare new active for animation
+          newActive.style.display = 'block';
+          newActive.classList.add('active');
+          
+          // Reset styles to ensure animation plays every time
+          newActive.style.transition = 'none';
+          newActive.style.opacity = '0';
+          newActive.style.transform = 'translateY(20px)';
+          
+          // Force reflow to ensure styles are applied
+          void newActive.offsetHeight;
+          
+          // Enable transition and trigger animation
+          requestAnimationFrame(() => {
+            newActive.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            newActive.style.opacity = '1';
+            newActive.style.transform = 'translateY(0)';
+          });
+          
+          // Clean up after animation
+          setTimeout(() => {
+            newActive.style.transition = '';
+          }, 300);
+        }
+        
+        // Animate price changes
+        document.querySelectorAll('.pricing span').forEach(price => {
+          if (price.classList.contains(plan + '-price')) {
+            price.style.opacity = '0';
+            price.style.display = 'block';
+            price.style.animation = 'fadeIn 0.5s forwards';
+          } else {
+            price.style.display = 'none';
+          }
+        });
+        
+        // Add card animation
+        document.querySelectorAll('.card').forEach((card, index) => {
+          if (plan === 'personalized') {
+            card.classList.add('personalized');
+          } else {
+            card.classList.remove('personalized');
+          }
+          // Staggered animation for cards
+          card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.05}s forwards`;
+        });
+      }
+      
+      // Add click handlers with animation
+      toggleButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Add click effect
+          this.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 100);
+          
+          // Show the selected plan with animation
+          showPlan(btn.dataset.plan);
+        });
+        
+        // Add hover effect
+        btn.addEventListener('mouseenter', function() {
+          if (!this.classList.contains('active')) {
+            this.style.transform = 'translateY(-2px)';
+          }
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+          if (!this.classList.contains('active')) {
+            this.style.transform = '';
+          }
+        });
+      });
+      
+      // Initialize with standard plan and fade in
+      setTimeout(() => {
+        showPlan('standard');
+        const standardDesc = document.querySelector('.plan-description[data-plan="standard"]');
+        if (standardDesc) {
+          standardDesc.style.opacity = '1';
+        }
+      }, 100);
+      
+      // Hide scroll down button when near bottom of page
+      window.addEventListener('scroll', function() {
+        const scrollPosition = window.innerHeight + window.scrollY;
+        const pageHeight = document.documentElement.scrollHeight - 100;
+        
+        if (scrollPosition >= pageHeight) {
+          scrollDownBtn.style.opacity = '0';
+          scrollDownBtn.style.pointerEvents = 'none';
+        } else {
+          scrollDownBtn.style.opacity = '0.8';
+          scrollDownBtn.style.pointerEvents = 'auto';
+        }
+      });
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>

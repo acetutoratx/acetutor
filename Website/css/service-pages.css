@@ -1,0 +1,302 @@
+/* css/service-pages.css */
+/* Service Page Styles */
+.service-page {
+  padding: 6.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--navy);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  color: var(--sage);
+  transform: translateX(-5px);
+}
+
+.service-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.service-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--sage);
+  margin: 1.2rem 0;
+  border-radius: 2px;
+}
+
+.service-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+/* Plan Comparison */
+.plan-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.4rem;
+  margin: 3.5rem 0;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-low);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-mid);
+}
+
+.plan-card.standard {
+  border-top: 4px solid var(--sage);
+}
+
+.plan-card.personalized {
+  border-top: 4px solid var(--navy);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--navy);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom-left-radius: 12px;
+}
+
+.plan-card h2 {
+  font-size: 1.7rem;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--sage);
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.plan-features {
+  margin: 1.8rem 0;
+  padding-left: 0;
+}
+
+.plan-features li {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.plan-features li i {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  color: var(--sage);
+  font-size: 1.1rem;
+}
+
+.book-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: var(--transition);
+  font-size: 1.05rem;
+  background: var(--sage);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-low);
+}
+
+.book-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-mid);
+  background: #7A8A7C;
+}
+
+.book-btn.primary {
+  background: var(--navy);
+}
+
+.book-btn.primary:hover {
+  background: #1e3a6b;
+}
+
+/* Additional Info */
+.additional-info {
+  margin: 5rem 0;
+  max-width: 800px;
+}
+
+.additional-info h2 {
+  font-size: 2rem;
+  color: var(--navy);
+  margin: 2.5rem 0 1.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.additional-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--sage);
+  border-radius: 2px;
+}
+
+.additional-info p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, rgba(138, 155, 142, 0.08) 0%, rgba(255, 255, 255, 0.9) 100%);
+  padding: 3.5rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 4rem;
+  border: 1px solid rgba(138, 155, 142, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sage), var(--navy));
+}
+
+.cta-section h2 {
+  color: var(--navy);
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.btn.large {
+  padding: 1.1rem 2.5rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .service-page {
+    padding: 4rem 1.5rem;
+  }
+  
+  .service-title {
+    font-size: 2.2rem;
+  }
+  
+  .plan-comparison {
+    grid-template-columns: 1fr;
+  }
+  
+  .additional-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-section {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Delay animations for staggered effect */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
