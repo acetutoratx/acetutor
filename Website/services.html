@@ -12,24 +12,28 @@
 <body>
 
   <header>
-    <nav class="navbar container">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.svg" alt="ACE Tutoring Logo" />
-        <span>ACE Tutor</span>
-      </a>
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="current-page">Services</li>
-        <li><a href="get-started.html">Get Started</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="ACE Tutoring Logo" />
+          <span>ACE Tutor</span>
+        </a>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="current-page">Services</li>
+            <li><a href="get-started.html">Get Started</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <section class="section">

@@ -1,58 +1,51 @@
 // js/main.js
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile menu toggle with better iOS support
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  // Mobile menu functionality
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
   
-  if (menuToggle && navLinks) {
-    // Toggle menu on button click
+  if (hamburger && navMenu) {
     const toggleMenu = () => {
-      const isOpen = menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('is-active');
+      navMenu.classList.toggle('is-active');
+      document.body.classList.toggle('menu-open');
       
-      // Prevent background scrolling when menu is open
-      if (isOpen) {
-        document.body.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.body.style.width = '100%';
-      } else {
-        document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
-      }
+      // Update ARIA attributes
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
     };
     
-    // Add touch event for better mobile support
-    menuToggle.addEventListener('click', toggleMenu);
-    menuToggle.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      toggleMenu();
-    });
+    // Toggle menu on click
+    hamburger.addEventListener('click', toggleMenu);
     
     // Close menu when clicking on a nav link
-    const closeMenu = () => {
-      menuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-    };
-    
     document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-      link.addEventListener('touchend', (e) => {
-        e.preventDefault();
-        closeMenu();
-        // Navigate to the link's href
-        window.location.href = link.href;
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          toggleMenu();
+        }
       });
     });
     
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.navbar') && navLinks.classList.contains('active')) {
-        closeMenu();
+      if (!e.target.closest('.navbar') && navMenu.classList.contains('is-active')) {
+        toggleMenu();
       }
+    });
+    
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (window.innerWidth > 768) {
+          hamburger.classList.remove('is-active');
+          navMenu.classList.remove('is-active');
+          document.body.classList.remove('menu-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      }, 250);
     });
   }
   
